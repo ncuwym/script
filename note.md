@@ -1,7 +1,10 @@
 ## for devops
 docker build -t ygsoft-xxx:v6.7.0-20201130 .
+
 docker save ygsoft-xxx:v6.7.0-20201130 > ygsoft-xxx-v6.7.0-20201130
+
 docker tag ygsoft-xxx:v6.7.0-20201130 127.0.0.1:5000/ywzt/ygsoft-xxx:v6.7.0-20201130
+
 docker push 127.0.0.1:5000/ywzt/ygsoft-xxx:v6.7.0-20201130
 
 ## 过多无意义的层，会造成镜像膨胀过大
