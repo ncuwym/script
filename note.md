@@ -29,3 +29,17 @@ kill -9 $(ps -ef | grep 进程特征 | grep -v grep | awk '{print $2}')
 ## 变量赋值
 sp_pid=`ps -ef | grep 进程特征 | grep -v grep | awk '{print $2}'`
 
+shell脚本批量执行时，需要一定的睡眠时间以保证程序等待以及基本进程的就绪
+
+## 查看Linux系统版本
+
+## Linux配置JDK
+tar -zxvf jdk1.8.0_221.tar.gz
+vi /etc/profile
+export JAVA_HOME=/data/jdk1.8.0_221
+export JRE_HOME=/data/jdk1.8.0_221/jre
+export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+source /etc/profile
+
+
