@@ -35,11 +35,43 @@ shell脚本批量执行时，需要一定的睡眠时间以保证程序等待以
 
 ## Linux配置JDK
 tar -zxvf jdk1.8.0_221.tar.gz
+
 vi /etc/profile
+
 export JAVA_HOME=/data/jdk1.8.0_221
+
 export JRE_HOME=/data/jdk1.8.0_221/jre
+
 export CLASSPATH=.:$JAVA_HOME/lib:$JRE_HOME/lib:$CLASSPATH
+
 export PATH=$JAVA_HOME/bin:$JRE_HOME/bin:$PATH
+
 source /etc/profile
+
+## redis 安装
+yum install gcc gcc-c++
+tar -zxvf redis-3.2.8.tar.gz
+make && make install
+vi redis.conf
+./src/redis-server ./redis.conf
+redis-cli -h IP -p 端口
+
+## 防火墙
+service iptables status
+service iptables stop
+
+## 修改hosts信息
+重启/etc/init.d/network restart
+
+## 离线安装unzip
+rpm -Uvh unzip-6.0-1.el6.x86_64.rpm
+
+
+
+
+
+
+
+
 
 
