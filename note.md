@@ -50,14 +50,20 @@ source /etc/profile
 
 ## redis 安装
 yum install gcc gcc-c++
+
 tar -zxvf redis-3.2.8.tar.gz
+
 make && make install
+
 vi redis.conf
+
 ./src/redis-server ./redis.conf
+
 redis-cli -h IP -p 端口
 
 ## 防火墙
 service iptables status
+
 service iptables stop
 
 ## 修改hosts信息
