@@ -1,0 +1,59 @@
+<html>
+
+<head>
+</head>
+
+<body>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+    vue在axios之后
+    <script src="https://unpkg.com/vue/dist/vue.js"></script>
+    <div>
+        基础
+        <v-show>操作元素的display属性</v-show>
+        <v-if>操作dom元素</v-if>
+        <v-bind>设置元素属性</v-bind>
+        <v-on>绑定方法</v-on>
+        :@keyup.enter=""
+        :@click=""
+        <v-for>生成列表结构----li </v-for>
+        this.list.push(this.imputName)
+        this.list.shift() 删除最后一个
+        <v-model>与表单的双向绑定</v-model>
+        this.list.splice(index,1) #删除数组下标对应的元素，一次删一个
+        list.length
+        清空：将数组置为[] this.list = []
+
+        axios
+        axios+vue
+        axios.get(url?查询字符串k=v&k=v).then(function(response){},function(err){})
+        axios.post(url,{k:v,k=v}).then(function(response){},function(err){})
+
+        普通js
+        document.querySelector(".get").onclick = function() {
+
+        }
+        document.querySelector(".post").onclick = function() {
+
+        }
+
+
+        methods：{
+        getJoke:function(){
+        var that = this;
+        axios.get(url).then(function(response){
+        that.joke = response.data; //将this的数据保存到that，ES6？
+        },function(err){
+
+        })
+
+        }
+        }
+
+
+
+
+    </div>
+</body>
+<div></div>
+
+</html>
